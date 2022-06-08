@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <script type="module" src="./index.mjs"></script>
-        <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
-    </head>
-    <div>
-        <div class="flip-book" id="example">
-            <div class="page page-cover page-cover-top" data-density="hard">
-              <div class="page-content">
-                <h2>BOOK TITLE</h2>
-              </div>
-            </div>
-            <div class="page">
-              <div class="page-content">
-                <h2 class="page-header">Page Header 1</h2>
-                <div class="page-image" style="background-image: url(monkey.png)"></div>
-                <div class="page-text">Page Content 1</div>
-                <div class="page-footer">2</div>
-              </div>
-            </div>
-            <div class="page">
-              <div class="page-content">
-                <h2 class="page-header">Page Header 2</h2>
-                <div class="page-image" style="background-image: url(monkey2.png)"></div>
-                <div class="page-text">Page Content 2</div>
-                <div class="page-footer">3</div>
-              </div>
-            </div>
-            <div class="page page-cover page-cover-bottom" data-density="hard">
-              <div class="page-content">
-                <h2>THE END</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-        <script src="index.mjs"></script>
+	<head>
+		<meta charset="UTF-8">
+		<title>YEYYYSYSYS</title>
+		<style>
+			body{
+				overflow: hidden;
+				background-image: url(shelfbackground.png);
+			}
+			#boxArea{
+				margin: 10% auto;
+				width: 800px;
+				height: 400px;
+
+			}
+			#boxArea .turn-page{
+				-webkit-background-size: 100% 100%;
+				background-size: 100% 100%;
+			}
+		</style>
+	</head>
+<body>
+
+	<div id="boxArea">
+		<div style="background-image: url(belveth.png)"></div>
+		<div style="background-image: url(monkey.png)"></div>
+    <a href="index.html">
+		<div>
+      There is text here so i can go back to home page
+    </div>
+    </a>
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="turn.min.js"></script>
+	<script>
+		$('#boxArea').turn({gradients: true, acceleration: true});
+	</script>
+</body>
 </html>

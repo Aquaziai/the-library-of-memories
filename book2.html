@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>:)</title>
+		<style>
+			body{
+				overflow: hidden;
+				background-image: url(shelfbackground.png);
+			}
+			#boxArea{
+				margin: 10% auto;
+				width: 720px;
+				height: 500px;
+			}
+			#boxArea .turn-page{
+				-webkit-background-size: 100% 100%;
+				background-size: 100% 100%;
+			}
+		</style>
+	</head>
+<body>
+
+	<div id="boxArea">
+		<div class="hard" style="background-image: url(belveth.png)"></div>
+		<div class="hard" style="background-image: url(years.png)"></div>
+			<div style="background-image: url(papertxture.jpeg)">
+				<a href="index.html">
+					Text
+				</a>
+			</div>
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="turn.min.js"></script>
+	<script>
+		$('#boxArea').turn({gradients: true, acceleration: true, pages: 100});
+	</script>
+</body>
+</html>

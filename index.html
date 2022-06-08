@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="stylesheet.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bookshelf.css" />
+    <script src="bookshelf.js"></script>
     <title>The Library of Memories</title>
 </head>
 <body> 
-    <div class="mediaobject">
+    <div class="bookshelf">
+      <a href="book1.html">
+      <div class="book">
+          <div class="side spine1">
+            <span class="spine-title"> Apple</span>
+            <span class="spine-author"> 25 May 2022</span>
+          </div>
+          <div class="side top"></div>
+          <div class="side cover"></div>
+        </div>
+      </a>
+      <a href="book2.html">
+        <div class="book">
+          <div class="side spine2">
+            <span class="spine-title"> Bird</span>
+            <span class="spine-author"> 26 Jun 2022</span>
+          </div>
+          <div class="side top"></div>
+          <div class="side cover"></div>
+        </div>
+      </a>
+        <div class="book">
+            <div class="side spine3">
+              <span class="spine-title"> Sky</span>
+              <span class="spine-author"> 30 Jul 2022</span>
+            </div>
+            <div class="side top"></div>
+            <div class="side cover"></div>
+          </div>
+      </div>
+      <div class="mediaobject">
         <img src="walnutwood.jpeg">  
     </div>
     <div class="mediaobject2">
@@ -25,18 +53,6 @@
     </div>
     <div class="mediaobject6">
         <img src="blackgradient.png">  
-    </div>
-    <div class="binder1">
-        <img src="bookbinder1.png" usemap="#book1">  
-        <map name="book1">
-            <area shape="rect" coords="0, 0, 100, 350" href="book1.html">
-        </map>
-    </div>
-    <div class="binder2">
-        <img src="bookbinder2.png" usemap="#book2">  
-        <map name="book2">
-            <area shape="rect" coords="0, 0, 100, 350" href="book2.html">
-        </map>
     </div>
 </body>
 </html>
