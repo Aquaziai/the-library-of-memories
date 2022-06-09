@@ -1,0 +1,255 @@
+body {
+  background-image: url("./shelfbackground.png");
+  background-color: #cccccc;
+ }
+:root {
+    --argyle: repeating-linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1) 1px,
+        transparent 1px,
+        transparent 60px
+      ),
+      repeating-linear-gradient(
+        60deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1) 1px,
+        transparent 1px,
+        transparent 60px
+      ),
+      linear-gradient(
+        60deg,
+        rgba(0, 0, 0, 0.1) 25%,
+        transparent 25%,
+        transparent 75%,
+        rgba(0, 0, 0, 0.1) 75%,
+        rgba(0, 0, 0, 0.1)
+      ),
+      linear-gradient(
+        120deg,
+        rgba(0, 0, 0, 0.1) 25%,
+        transparent 25%,
+        transparent 75%,
+        rgba(0, 0, 0, 0.1) 75%,
+        rgba(0, 0, 0, 0.1)
+      );
+    background-size: 70px 120px;
+    --tartan: repeating-linear-gradient(
+        transparent,
+        transparent 50px,
+        rgba(0, 0, 0, 0.4) 50px,
+        rgba(0, 0, 0, 0.4) 53px,
+        transparent 53px,
+        transparent 63px,
+        rgba(0, 0, 0, 0.4) 63px,
+        rgba(0, 0, 0, 0.4) 66px,
+        transparent 66px,
+        transparent 116px,
+        rgba(0, 0, 0, 0.5) 116px,
+        rgba(0, 0, 0, 0.5) 166px,
+        rgba(255, 255, 255, 0.2) 166px,
+        rgba(255, 255, 255, 0.2) 169px,
+        rgba(0, 0, 0, 0.5) 169px,
+        rgba(0, 0, 0, 0.5) 179px,
+        rgba(255, 255, 255, 0.2) 179px,
+        rgba(255, 255, 255, 0.2) 182px,
+        rgba(0, 0, 0, 0.5) 182px,
+        rgba(0, 0, 0, 0.5) 232px,
+        transparent 232px
+      ),
+      repeating-linear-gradient(
+        270deg,
+        transparent,
+        transparent 50px,
+        rgba(0, 0, 0, 0.4) 50px,
+        rgba(0, 0, 0, 0.4) 53px,
+        transparent 53px,
+        transparent 63px,
+        rgba(0, 0, 0, 0.4) 63px,
+        rgba(0, 0, 0, 0.4) 66px,
+        transparent 66px,
+        transparent 116px,
+        rgba(0, 0, 0, 0.5) 116px,
+        rgba(0, 0, 0, 0.5) 166px,
+        rgba(255, 255, 255, 0.2) 166px,
+        rgba(255, 255, 255, 0.2) 169px,
+        rgba(0, 0, 0, 0.5) 169px,
+        rgba(0, 0, 0, 0.5) 179px,
+        rgba(255, 255, 255, 0.2) 179px,
+        rgba(255, 255, 255, 0.2) 182px,
+        rgba(0, 0, 0, 0.5) 182px,
+        rgba(0, 0, 0, 0.5) 232px,
+        transparent 232px
+      ),
+      repeating-linear-gradient(
+        125deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.2) 2px,
+        rgba(0, 0, 0, 0.2) 3px,
+        transparent 3px,
+        transparent 5px,
+        rgba(0, 0, 0, 0.2) 5px
+      );
+  }
+  
+  .bookshelf {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .book {
+    width: 50px;
+    height: 280px;
+    position: relative;
+    margin-left: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(0) rotateY(0);
+    transition: transform 1s;
+  }
+  
+  .side {
+    position: absolute;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 3px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    transform-origin: center left;
+  }
+  
+  .spine2 {
+    position: relative;
+    width: 50px;
+    height: 280px;
+    background-image: var(--argyle), url(./birdbinder.png);
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .spine1 {
+    position: relative;
+    width: 50px;
+    height: 280px;
+    background-image: var(--argyle), url(./applebinder.png);
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .spine3 {
+    position: relative;
+    width: 50px;
+    height: 280px;
+    background-image: var(--argyle), url(./skybinder.png);
+    transform: rotateY(0deg) translateZ(0px);
+  }
+
+  .spine-title {
+    margin: 2px;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+  
+  .spine-author {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: small;
+    bottom: 10px;
+    left: 0; /* no idea why 20% centers it */
+    transform: rotate(0deg);
+  }
+  
+  .top {
+    width: 50px;
+    height: 190px;
+    top: -2px;  /* hmm, why -2 and not 0? */
+    background-image: linear-gradient(90deg, white 90%, gray 10%);
+    background-size: 5px 5px;
+    transform: rotateX(90deg) translateZ(95px) translateY(-95px);
+  }
+  
+  .cover {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url("https://picsum.photos/190/280");
+    background-size: contain;
+    background-repeat: round;
+    left: 50px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  
+  .book:hover {
+    z-index: 1;
+    transform: rotateX(-5deg) rotateY(-45deg) rotateZ(0deg) translateY(10px)
+      translateX(-30px);
+  }
+body::before {
+    position: absolute;
+    content: '';
+    left: 0px;
+    top: 0px;
+    width: 1450px;
+    height: 793px;
+    z-index: -3;
+    background-image: url('shelfbackground.png');
+  }
+.mediaobject img {
+    width: 1450px;
+    height: 50px;
+    left: -10px;
+    top: 293px;
+    z-index: -1;
+    position: absolute;
+}
+.mediaobject2 img {
+    width: 1450px;
+    height: 50px;
+    z-index: -1;
+    left: -10px;
+    bottom: 0px;
+    position: absolute;
+    }
+.mediaobject3 img {
+    width: 1450px;
+    height: 300px;
+    position: absolute;
+    transform: rotate(180deg);
+    top: 343px;
+    left: -10px;
+    z-index: -2;
+    opacity: 0.7;
+    }
+.mediaobject4 img {
+    width: 1450px;
+    height: 300px;
+    position: absolute;
+    transform: rotate(180deg);
+    top: 0px;
+    left: -10px;
+    z-index: -2;
+    opacity: 0.6;
+    }
+.mediaobject5 img {
+    width: 1450px;
+    height: 30px;
+    position: absolute;
+    left: -10px;
+    top: 263px;
+    z-index: -2;
+    opacity: 0.5;
+    }
+.mediaobject6 img {
+    width: 1450px;
+    height: 30px;
+    position: absolute;
+    left: -10px;
+    top: 709px;
+    z-index: -2;
+    opacity: 0.5;
+    }
