@@ -2,41 +2,49 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>YEYYYSYSYS</title>
+		<title>:)</title>
 		<style>
 			body{
 				overflow: hidden;
 				background-image: url(shelfbackground.png);
 			}
 			#boxArea{
-				margin: 10% auto;
-				width: 800px;
-				height: 400px;
-
+				margin: 10px;
+				width: 1400px;
+				height: 770px;
 			}
-			#boxArea .turn-page{
+			#boxArea .page{
 				-webkit-background-size: 100% 100%;
 				background-size: 100% 100%;
+				background-position: top;
+				background-repeat: no-repeat;
+				background-color: white;
 			}
 		</style>
 	</head>
 <body>
 
 	<div id="boxArea">
-		<div style="background-image: url(belveth.png)"></div>
-		<div style="background-image: url(monkey.png)"></div>
-    <a href="index.html">
-		<div>
-      There is text here so i can go back to home page
-    </div>
-    </a>
+		<div class="hard" style="background-image: url(belveth.png)"></div>
+		<div class="hard" style="background-image: url(years.png)"></div>
+			<div style="background-image: url(papertxture.jpeg)">
+				<a href="index.html">
+					Text
+				</a>
+			</div>
+		<div style="background-image: url(years.png)"></div>
+		<div style="background-image: url(papertxture.jpeg)"></div>
 	</div>
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="turn.min.js"></script>
 	<script>
-		$('#boxArea').turn({gradients: true, acceleration: true});
+		$('#boxArea').turn({gradients: true, acceleration: true, pages: 20, autocenter: true});
+		$('#boxArea').bind('missing', function(event, pages){ for (var i = 0; i < pages.length; i++) {
+            $(this).turn('addPage',
+                 $('<div/>'), pages[i]);
+} });
 	</script>
 </body>
 </html>
