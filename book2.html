@@ -21,26 +21,67 @@
 				background-color: white;
 			}
 		</style>
+		<link rel="book2" href="book2.css">
 	</head>
 <body>
 
 	<div id="boxArea">
-		<div class="hard" style="background-image: url(belveth.png)"></div>
-		<div class="hard" style="background-image: url(years.png)"></div>
-			<div style="background-image: url(papertxture.jpeg)">
-				<a href="index.html">
-					Text
-				</a>
-			</div>
-		<div style="background-image: url(years.png)"></div>
+		<div class="hard" style="background-image: url(cover3.jpeg)"></div>
+		<div class="hard" style="background-image: url(papertxture.jpeg)"></div>
 		<div style="background-image: url(papertxture.jpeg)"></div>
+		<div style="background-image: url(papertxture.jpeg)">
+			<form name="uploadForm">
+				<table>
+				  <tbody>
+					<tr>
+					  <td hidden><input id="upload-Image" type="file" onchange="loadImageFile();"></td>
+					</tr>
+					<label for="upload-Image" style="background-color: burlywood;
+						color: rgb(88, 50, 0);
+						padding: 0.5rem;
+						font-family: Arial;
+						border: 2px rgb(47, 28, 0);
+						border-radius: 0.3rem;
+						cursor: pointer;
+						position: absolute;
+						left: 300px;">Select your file</label>
+					<tr>
+					  <td hidden><img id="original-Img"/></td>
+					</tr>
+					 <tr>
+					  <td><img id="upload-Preview" style="position:absolute; 
+					  transform: rotate(-15deg); 
+					  top: 60px; 
+					  left: 70px; 
+					  max-width: 100%;
+					  max-height: 100%;
+					  height: auto;
+					  width: 400px;
+					  object-fit: contain"/></td>
+					</tr>
+				  </tbody>
+				</table>
+			  </form>
+		</div>
+		<div style="background-image: url(papertxture.jpeg)"></div>
+		<div style="background-image: url(papertxture.jpeg)"></div>
+		<div style="background-image: url(papertxture.jpeg)"></div>
+		<div style="background-image: url(papertxture.jpeg)"></div>
+		<div style="background-image: url(papertxture.jpeg)"></div>
+		<div style="background-image: url(papertxture.jpeg)"></div>
+		<div style="background-image: url(papertxture.jpeg)">
+			<a href="index.html">
+				Go Back
+			</a>
+		</div>
 	</div>
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="turn.min.js"></script>
+	<script src="uploadtest.js"></script>
 	<script>
-		$('#boxArea').turn({gradients: true, acceleration: true, pages: 20, autocenter: true});
+		$('#boxArea').turn({gradients: true, acceleration: true, pages: 20, autocenter: true, duration: 2500});
 		$('#boxArea').bind('missing', function(event, pages){ for (var i = 0; i < pages.length; i++) {
             $(this).turn('addPage',
                  $('<div/>'), pages[i]);
