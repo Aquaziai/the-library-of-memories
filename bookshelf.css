@@ -96,6 +96,7 @@ body {
   .bookshelf {
     width: 100%;
     margin-top: 10px;
+    margin-left: 5px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -104,6 +105,17 @@ body {
     width: 50px;
     height: 280px;
     position: relative;
+    margin-left: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(0) rotateY(0);
+    transition: transform 1s;
+  }
+
+  .bookclone {
+    width: 50px;
+    height: 280px;
+    position: absolute;
+    left: auto;
     margin-left: 1px;
     transform-style: preserve-3d;
     transform: translateZ(0) rotateY(0);
@@ -253,3 +265,15 @@ body::before {
     z-index: -2;
     opacity: 0.5;
     }
+.label{
+    background-color: burlywood;
+    color: rgb(88, 50, 0);
+    padding: 0.5rem;
+    font-family: Arial;
+    border: 2px rgb(47, 28, 0);
+    border-radius: 0.3rem;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }

@@ -21,7 +21,7 @@
 				background-color: white;
 			}
 		</style>
-		<link rel="stylesheet" href="/book2.css">
+		<link rel="stylesheet" href="/book3.css">
 	</head>
 <body>
 
@@ -35,7 +35,7 @@
 		<div style="background-image: url(papertxture.jpeg)"></div>
 		<div style="background-image: url(papertxture.jpeg)">
 			<input type="file"  accept="image/*" name="image1" id="imgfile1"  onchange="loadFile(event)" hidden>
-
+            
             <label class="label" for="imgfile1">⇪ Upload a photo ⇪</label> 
 
             <p><img id="output" width="200" /></p>
@@ -66,59 +66,13 @@
             
             <label class="label3" for="imgfile3">⇪ Upload a photo ⇪</label> 
 
-			<button id="start-camera">Start Camera</button>
-
-			<video id="video" height="240" width="360" autoplay></video>
-
-			<button id="click-photo">Take Photo</button>
-
-			<button id="stop-camera">Stop Camera</button>
-
-            <p><canvas id="landscape2" width="200"></canvas></p>
+            <p><img id="landscape2" width="200"/></p>
 			<script>
 				var loadFile3 = function(event){
 				var image3 = document.getElementById('landscape2');
 					image3.src = URL.createObjectURL(event.target.files[0]);
 
 				};
-
-				let camera_button = document.querySelector("#start-camera");
-				let video = document.querySelector("#video");
-				let click_button = document.querySelector("#click-photo");
-				let stop_camera = document.querySelector('#stop-camera')
-				let output = document.querySelector("#landscape2");
-
-				camera_button.addEventListener('click', async function() {
-							const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
-					video.srcObject = stream;
-				});
-
-				click_button.addEventListener('click', function() {
-							output.getContext('2d').drawImage(video, 0, 0, output.width, output.height);
-							let image_data_url = output.toDataURL('image/jpeg');
-
-							// data url of the image
-							console.log(image_data_url);
-							//testing to see if this works in a different event, delete the next 6 lines if it doesn't
-							video.pause();
-							video.srcObject = null;
-							localstream.getTracks().forEach(function(track) {
-								track.stop();
-							});
-							console.log("Video off");
-				});
-
-				stop_camera.addEventListener('click', function vidOff() {
-					//clearInterval(theDrawLoop);
-					//ExtensionData.vidStatus = 'off';
-					video.pause();
-					video.srcObject = null;
-					//localstream is not defined, fix it
-					localstream.getTracks().forEach(function(track) {
-						track.stop();
-					});
-					console.log("Video off");
-				});
 			</script>
 			</div>
 		</div>
@@ -212,8 +166,6 @@
 			<a style="position: absolute; right: 0;" href="index.html">
 				Go Back
 			</a>
-		</div>
-		<div style="background-image: url(papertxture.jpeg)">
 		</div>
 	</div>
 

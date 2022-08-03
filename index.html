@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,8 @@
 </head>
 <body> 
     <div class="bookshelf">
+      <button id="addbooks" onclick="duplicate()" hidden></button>
+      <label class="label" for="addbooks">+ Add Book +</label> 
       <a href="book1.html">
       <div class="book">
           <div class="side spine1">
@@ -27,7 +30,7 @@
           <div class="side cover"></div>
         </div>
       </a>
-      <a href="book3.html">
+      <a href="book3.html" id="duplicatethis">
         <div class="book">
             <div class="side spine3">
               <span class="spine-title"> Sky</span>
@@ -36,8 +39,19 @@
             <div class="side top"></div>
             <div class="side cover"></div>
           </div>
-      </div>
       </a>
+      <script>
+        var i = 0;  
+            var original = document.getElementById('duplicatethis');
+
+            function duplicate() {
+            var clone = original.cloneNode(true); // "deep" clone
+            clone.id = "newbook" + ++i;
+            // or clone.id = ""; if the divs don't need an ID
+            original.parentNode.appendChild(clone);
+            }
+      </script>
+    </div>
       <div class="mediaobject">
         <img src="walnutwood.jpeg">  
     </div>
