@@ -78,7 +78,7 @@
   position: absolute;
   top: 110px;
 } 
-  
+
 p{
     display: flex;
     align-items: center;
@@ -330,3 +330,4 @@ div{
   -webkit-transform: translateY(-5px) rotate(90deg);
   transform: translateY(-5px) rotate(90deg);
 }
+  

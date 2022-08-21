@@ -60,9 +60,7 @@ camera_button.addEventListener('click', async function() {
 click_button.addEventListener('click', function() {
             output.getContext('2d').drawImage(video, 0, 0, output.width, output.height);
             let image_data_url = output.toDataURL('image/jpeg');
-            // data url of the image
             console.log(image_data_url);
-            //testing to see if this works in a different event, delete the next 6 lines if it doesn't
             video.pause();
             video.srcObject = null;
             localstream.getTracks().forEach(function(track) {
@@ -82,11 +80,6 @@ stop_camera.addEventListener('click', function vidOff() {
     });
     console.log("Video off");
 });
-
-//var loadfile = function(id){
-//    var image = document.getElementById('output'+id.slice())
-//    console.log("image found")
-//}
 
 
 var loadFile2 = function(event){

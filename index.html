@@ -4,17 +4,74 @@
 <head>
     <link rel="stylesheet" href="bookshelf.css" />
     <script src="bookshelf.js"></script>
-    <title>The Library of Memories</title>
+    <title>TLOM - Home</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body> 
+  <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+      <script>
+        $(document).ready(function() {
+
+          setTimeout(function(){
+            $('body').addClass('loaded');
+            $('h1').css('color','#222222');
+          }, 3000);
+
+        });
+      </script>
+    </div>
+    <div>
+      <img style="width: 120px; height: auto; bottom: 0px; left: 0px; position: absolute; opacity: 70%;" src="/logo3d.png">
+    </div>
     <div class="bookshelf">
       <button id="addbooks" onclick="duplicate()" hidden></button>
       <label class="label float-on-hover" for="addbooks">
         +
-        <div class="addbookstext">
+      </label> 
+
+      <label class="label2 float-on-hover">
+        ?
+      </label>
+
+      <label class="label3 float-on-hover">
+        ⚙
+      </label>
+
+      <label class="label4 float-on-hover">
+        ䷤
+      </label>
+
+      <label class="label5 float-on-hover">
+        ◯
+      </label>
+      <a href="./index.html">
+      <label class="label6 float-on-hover">
+        ⌂
+      </label>
+      </a>
+      <div class="hotbartext">
+        <div style="position: absolute; left: 76px;">
+          Home
+        </div>
+        <div style="position: absolute; left: 196px;">
+          Profile
+        </div>
+        <div style="position: absolute; left: 300px;">
+          My Family
+        </div>
+        <div style="position: absolute; left: 429px;">
+          Settings
+        </div>
+        <div style="position: absolute; left: 563px;">
+          Help
+        </div>
+        <div style="position: absolute; left: 657px;">
           Add Books
         </div>
-      </label> 
+      </div>
       <a href="book1.html">
       <div class="book">
           <div class="side spine1">

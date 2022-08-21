@@ -23,12 +23,9 @@
 		</style>
 		<link rel="stylesheet" href="./book2.css">
 		<script src="https://www.gstatic.com/firebasejs/live/4.9/firebase.js"></script>
-		<script type="module" src="./book2.js"></script>
+		<script type="module" src="./book.js"></script>
 	</head>
 
-	<a style="position: absolute; right: 0;" href="index.html">
-		Go Back
-	</a>
 <body>
 	<div id="boxArea">
 		<div class="hard" style="background-image: url(cover3.jpeg)"></div>
@@ -210,6 +207,31 @@
 		<div style="background-image: url(papertxture.jpeg)">
 		</div>
 		<div style="background-image: url(papertxture.jpeg)">
+			<a href="index.html">
+			<label style="position: absolute; 
+			left: 0;
+			background-color: burlywood;
+			color: rgb(88, 50, 0);
+			padding: 0.5rem;
+			font-family: Arial;
+			font-size: 60px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 90px;
+			width: 90px;
+			border: 2px rgb(47, 28, 0);
+			border-radius: 50%;
+			cursor: pointer;
+			position: absolute;
+			left: 5px;
+			top: 10px;" class="float-on-hover">
+			⇤	
+			<div class="other">
+				Go Home
+			</div>
+		</label>
+			</a>
 		</div>
 	</div>
 
@@ -222,7 +244,7 @@
 	
 	</script>
 	<script>
-		$('#boxArea').turn({gradients: true, acceleration: true, pages: 20, autocenter: true, duration: 1000});
+		$('#boxArea').turn({gradients: true, acceleration: true, pages: 20, autocenter: true, duration: 1500});
 		$('#boxArea').bind('missing', function(event, pages){ for (var i = 0; i < pages.length; i++) {
             $(this).turn('addPage',
                 $('<div/>'), pages[i]);

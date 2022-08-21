@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>:)</title>
+		<title>Album Book 1</title>
 		<style>
 			body{
 				overflow: hidden;
@@ -21,23 +21,216 @@
 				background-color: white;
 			}
 		</style>
+		<link rel="stylesheet" href="./book1.css">
+		<script src="https://www.gstatic.com/firebasejs/live/4.9/firebase.js"></script>
+		<script type="module" src="./book.js"></script>
 	</head>
-<body>
 
+<body>
 	<div id="boxArea">
-		<div class="hard" style="background-image: url(cover1.webp)"></div>
-		<div class="hard" style="background-image: url(papertxture.jpeg)"></div>
-		<div style="background-image: url(papertxture.jpeg)"></div>
-		<div style="background-image: url(papertxture.jpeg)"></div>
-		<div style="background-image: url(papertxture.jpeg)"></div>
-		<div style="background-image: url(papertxture.jpeg)"></div>
-		<div style="background-image: url(papertxture.jpeg)"></div>
-		<div style="background-image: url(papertxture.jpeg)"></div>
-		<div style="background-image: url(papertxture.jpeg)"></div>
-		<div style="background-image: url(papertxture.jpeg)"></div>
+		<div class="hard" style="background-image: url(cover3.jpeg)"></div>
+		<div class="hard" style="background-image: url(papertxture.jpeg)">
+			<p style="font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 100px; display: flex; align-items: center; justify-content: center; width: 100%; height: 50%;">Memories #1</p>
+		</div>
+		<div style="background-image: url(papertxture.jpeg)">
+			<p style="font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 70px; display: flex; align-items: center; justify-content: center; width: 100%; height: 60%;">By Dawson Wang</p>
+		</div>
+		<div style="background-image: url(papertxture.jpeg)">
+			<input type="file"  accept="image/*" name="image1" id="imgfile1" hidden>
+
+			<progress id="uploader" value="0" max="100">0%</progress>
+
+			<label class="magnify float-on-hover">
+				🔍
+				<div class="zoomtext">
+					Magnify
+				</div>
+			</label>
+
+			<label class="share float-on-hover2">
+				V
+				<div class="sharetext">
+					Share Photo
+				</div>
+			</label>
+
+            <label class="label float-on-hover" for="imgfile1">
+				⇪
+				<div class="other">
+					Place Photo
+				</div>
+			</label>
+            	<p>
+					<img id="output" width="200" />
+				</p>
+		</div>
+		<div style="background-image: url(papertxture.jpeg)">
+			<div>
+			<input type="file"  accept="image/*" name="image2" id="imgfile2" hidden>
+            
+            <label class="label2 float-on-hover" for="imgfile2">
+				⇪
+				<div class="other">
+					Place Photo
+				</div>
+			</label> 
+
+            <p><img id="landscape1" width="200" /></p>
+			</div>
+			<div>
+			<input type="file"  accept="image/*" name="image3" id="imgfile3" hidden>
+            
+            <label class="label3 float-on-hover" for="imgfile3">
+				⇪
+				<div class="other">
+					Place Photo
+				</div>
+			</label>  
+
+			<button id="start-camera" style="position: absolute; left: 200px; bottom: 0px;">Start Camera</button>
+
+			<video id="video" height="240" width="360" autoplay></video>
+
+			<button id="click-photo" style="position: absolute; left: 300px; bottom: 0px;">Take Photo</button>
+
+			<button id="stop-camera" style="position: absolute; left: 388px; bottom: 0px;">Stop Camera</button>
+
+            <p><canvas id="landscape2" width="200"></canvas></p>
+			</div>
+		</div>
+		<div style="background-image: url(papertxture.jpeg)">
+			<input type="file"  accept="image/*" name="image4" id="imgfile4" hidden>
+            
+			<label class="magnify float-on-hover">
+				🔍
+				<div class="zoomtext">
+					Magnify
+				</div>
+			</label>
+
+			<label class="share float-on-hover2">
+				V
+				<div class="sharetext">
+					Share Photo
+				</div>
+			</label>
+
+            <label class="label float-on-hover" for="imgfile4">
+				⇪
+				<div class="other">
+					Place Photo
+				</div>
+			</label> 
+			
+            <p>
+				<img id="output2" width="200"/>
+			</p>
+		</div>
+		<div style="background-image: url(papertxture.jpeg)">
+			<div>
+			<input type="file"  accept="image/*" name="image5" id="imgfile5" hidden>
+            
+            <label class="label2 float-on-hover" for="imgfile5">
+				⇪
+				<div class="other">
+					Place Photo
+				</div>
+			</label> 
+
+            <p><img id="landscape3" width="200" /></p>
+			</div>
+			<div>
+			<input type="file"  accept="image/*" name="image6" id="imgfile6" hidden>
+            
+            <label class="label3 float-on-hover" for="imgfile6">
+				⇪
+				<div class="other">
+					Place Photo
+				</div>
+			</label> 
+
+            <p><img id="landscape4" width="200"/></p>
+			</div>
+		</div>
+		<div style="background-image: url(papertxture.jpeg)">
+			<input type="file"  accept="image/*" name="image7" id="imgfile7" hidden>
+            
+			<label class="magnify float-on-hover">
+				🔍
+				<div class="zoomtext">
+					Magnify
+				</div>
+			</label>
+
+			<label class="share float-on-hover2">
+				V
+				<div class="sharetext">
+					Share Photo
+				</div>
+			</label>
+
+            <label class="label float-on-hover" for="imgfile7">
+				⇪
+				<div class="other">
+					Place Photo
+				</div>
+			</label> 
+
+            <p><img id="output3" width="200" /></p>
+		</div>
+		<div style="background-image: url(papertxture.jpeg)">
+			<div>
+			<input type="file"  accept="image/*" name="image8" id="imgfile8" hidden>
+            
+            <label class="label2 float-on-hover" for="imgfile8">
+				⇪
+				<div class="other">
+					Place Photo
+				</div>
+			</label> 
+
+            <p><img id="landscape5" width="200" /></p>
+			</div>
+			<div>
+			<input type="file"  accept="image/*" name="image9" id="imgfile9a" hidden>
+            
+            <label class="label3 float-on-hover" for="imgfile9">
+				⇪
+				<div class="other">
+					Place Photo
+				</div>
+			</label> 
+
+            <p><img id="landscape6" width="200"/></p>
+			</div>
+		</div>
+		<div style="background-image: url(papertxture.jpeg)">
+		</div>
 		<div style="background-image: url(papertxture.jpeg)">
 			<a href="index.html">
-				Go Back
+			<label style="position: absolute; 
+			left: 0;
+			background-color: burlywood;
+			color: rgb(88, 50, 0);
+			padding: 0.5rem;
+			font-family: Arial;
+			font-size: 60px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 90px;
+			width: 90px;
+			border: 2px rgb(47, 28, 0);
+			border-radius: 50%;
+			cursor: pointer;
+			position: absolute;
+			left: 5px;
+			top: 10px;" class="float-on-hover">
+			⇤	
+			<div class="other">
+				Go Home
+			</div>
+		</label>
 			</a>
 		</div>
 	</div>
@@ -45,12 +238,16 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="turn.min.js"></script>
+</body>
+
+<script type="module">
+	
+	</script>
 	<script>
-		$('#boxArea').turn({gradients: true, acceleration: true, pages: 20, autocenter: true});
+		$('#boxArea').turn({gradients: true, acceleration: true, pages: 20, autocenter: true, duration: 1500});
 		$('#boxArea').bind('missing', function(event, pages){ for (var i = 0; i < pages.length; i++) {
             $(this).turn('addPage',
-                 $('<div/>'), pages[i]);
+                $('<div/>'), pages[i]);
 } });
 	</script>
-</body>
 </html>
