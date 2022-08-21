@@ -518,7 +518,7 @@ body::before {
 
     #loader-wrapper .loader-section.section-left {
         left: 0;
-        background-image: url(/logo3d.png);
+        background-image: url(./logo3d.png);
         background-repeat: no-repeat;
         background-size: 70%;
         background-position: 464px;
@@ -526,7 +526,7 @@ body::before {
 
     #loader-wrapper .loader-section.section-right {
         right: 0;
-        background-image: url(/logo3d.png);
+        background-image: url(./logo3d.png);
         background-repeat: no-repeat;
         background-size: 70%;
         background-position: -249px;
